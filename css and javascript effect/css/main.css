@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #b90e1f;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top
+}
+
+#particles-js {
+    position: relative;
+    height: 100vh;
+    background-color: #fff;
+    mix-blend-mode: screen
+}
