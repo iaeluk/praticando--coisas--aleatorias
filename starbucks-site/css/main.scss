@@ -35,26 +35,6 @@ section {
             max-width: 80px;
         }
 
-        // .toggle {
-        //     position: relative;
-        //     width: 30px;
-        //     height: 30px;
-        //     cursor: pointer;
-        //     background-image: url(../img/menu.png);
-        //     background-size: 30px;
-        //     background-position: center;
-        //     background-repeat: no-repeat;
-        //     filter: invert(1);
-
-        //     &:active {
-        //         background-image: url(../img/close.png);
-        //         background-size: 25px;
-        //         background-position: center;
-        //         background-repeat: no-repeat;
-                
-        //     }
-        // }
-
         ul {
             position: relative;
             display: flex;
@@ -276,7 +256,7 @@ section {
             border-top-left-radius: 5px;
             border-bottom-left-radius: 5px;
 
-            transform: translateY(20%);
+            transform: translateY(5%);
         }
 
         .circle {
