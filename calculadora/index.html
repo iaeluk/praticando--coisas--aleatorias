@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <div class="container">
+        <form class="calculator" name="calc">
+            <input type="text" readonly class="value" name="txt" />
+            <span class="num clear" onclick="calc.txt.value = ''">c</span>
+            <span class="num" onclick="porcentagem(document.calc.txt.value)">%</span>
+            <span class="num" onclick="document.calc.txt.value +='/'">/</span>
+            <span class="num" onclick="document.calc.txt.value +='7'">7</span>
+            <span class="num" onclick="document.calc.txt.value +='8'">8</span>
+            <span class="num" onclick="document.calc.txt.value +='9'">9</span>
+            <span class="num" onclick="document.calc.txt.value +='*'">*</span>
+            <span class="num" onclick="document.calc.txt.value +='4'">4</span>
+            <span class="num" onclick="document.calc.txt.value +='5'">5</span>
+            <span class="num" onclick="document.calc.txt.value +='6'">6</span>
+            <span class="num" onclick="document.calc.txt.value +='-'">-</span>
+            <span class="num" onclick="document.calc.txt.value +='1'">1</span>
+            <span class="num" onclick="document.calc.txt.value +='2'">2</span>
+            <span class="num" onclick="document.calc.txt.value +='3'">3</span>
+            <span class="num plus" onclick="document.calc.txt.value +='+'">+</span>
+            <span class="num" onclick="document.calc.txt.value +='0'">0</span>
+            <span class="num" onclick="document.calc.txt.value +='00'">00</span>
+            <span class="num" onclick="document.calc.txt.value +='.'">.</span>
+            <span class="num equal" onclick="document.calc.txt.value = eval(calc.txt.value)">=</span>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="./js/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".container"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2,
+        });
+
+
+        function porcentagem(valor) {
+            let symbol = ''
+
+            if (valor.includes("+")) {
+                symbol = '+'
+            } else if (valor.includes("-")) {
+                symbol = '-'
+            } else if (valor.includes("*")) {
+                symbol = '*'
+            } else if (valor.includes("/")) {
+                symbol = '/'
+            }
+
+            const removeSimbol = valor.split(symbol)
+            let calc = (removeSimbol[0] * removeSimbol[1]) / 100;
+            let result = '';
+
+            if (valor.includes("+")) {
+                result = Number(removeSimbol[0]) + calc;
+                document.calc.txt.value = result;
+            } else if (valor.includes("-")) {
+                result = Number(removeSimbol[0]) - calc;
+                document.calc.txt.value = result;
+            } else if (valor.includes("*")) {
+                result = calc;
+                document.calc.txt.value = result;
+            } else if (valor.includes("/")) {
+                result = Number(removeSimbol[0]) / (Number(removeSimbol[1]) / 100);
+                document.calc.txt.value = result;
+            } else {
+                document.calc.txt.value = valor / 100;
+            }
+        }
+    </script>
+</body>
+</html>
