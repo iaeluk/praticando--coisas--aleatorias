@@ -207,7 +207,10 @@ section {
                     position:fixed;
                     right: 20px;
                     background: url(../img/close.png);
-                    background-size: 25px; 
+                    background-size: 25px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    z-index: 11;
                 }
             }
         }
