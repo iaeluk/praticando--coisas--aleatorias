@@ -37,12 +37,25 @@
 
     <script type="text/javascript" src="./js/vanilla-tilt.js"></script>
     <script type="text/javascript">
-        VanillaTilt.init(document.querySelector(".container"), {
-            max: 25,
-            speed: 400,
-            glare: true,
-            "max-glare": 0.2,
-        });
+        const mediaQuery = window.matchMedia('(min-width: 768px)')
+        // min-width = tela acima de... retorna true | max-width = tela abaixo de... retorna true
+
+        function handleTabletChange(e) {
+            // Check if the media query is true
+            if (e.matches) {
+                VanillaTilt.init(document.querySelector(".container"), {
+                    max: 25,
+                    speed: 400,
+                    glare: true,
+                    "max-glare": 0.2,
+                });
+            }
+        }
+        // Register event listener
+        mediaQuery.addListener(handleTabletChange)
+
+        // Initial check
+        handleTabletChange(mediaQuery)
 
 
         function porcentagem(valor) {
@@ -80,4 +93,5 @@
         }
     </script>
 </body>
+
 </html>
