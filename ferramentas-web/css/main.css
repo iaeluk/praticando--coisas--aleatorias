@@ -14,12 +14,21 @@ header {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  margin-bottom: 2rem;
 }
 
 header h1 {
   font-size: max(30px, 5vw);
   font-family: 'Anton', sans-serif;
   color: #fff;
+}
+
+header #particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
 }
 
 body {
@@ -29,45 +38,41 @@ body {
   width: 100%;
 }
 
-main {
-  position: relative;
+body main {
   width: min(1500px, 100%);
   padding: 1.5rem;
 }
 
-main section + section {
-  margin-top: 3.5rem;
+body main section + section {
+  margin-top: 2.8rem;
 }
 
-main h2 + div {
+body main h2 + div {
   margin-top: 2rem;
 }
 
-main section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-main section h2 {
-  font-size: max(2rem, 3vw);
-  color: #feac5e;
-  font-family: 'Lato', sans-serif;
-}
-
-main section .container {
+body main section .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 1.3rem 1rem;
 }
 
-main section .container .container--content {
+body main section .container > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25rem;
+          flex: 1 1 25rem;
+}
+
+body main section h2 {
+  font-size: max(2rem, 3vw);
+  color: #feac5e;
+  font-family: 'Lato', sans-serif;
+}
+
+body main section .container--content {
   max-width: 33.3%;
   min-width: 20rem;
   display: -webkit-box;
@@ -79,53 +84,47 @@ main section .container .container--content {
           flex-direction: column;
 }
 
-main section .container .container--content img {
+body main section .container--content img {
   max-width: 48px;
 }
 
-main section .container .container--content img,
-main section .container .container--content a {
+body main section .container--content img,
+body main section .container--content a {
   margin-bottom: 0.5rem;
 }
 
-main section .container .container--content a {
+body main section .container--content a {
   text-decoration: none;
   font-size: 1.3rem;
   color: #4bc0c8;
 }
 
-main section .container .container--content a:hover {
+body main section .container--content a:hover {
   text-decoration: underline;
 }
 
-main section .container .container--content p {
+body main section .container--content p {
   padding-right: 2.5rem;
   margin-bottom: 35px;
   color: #454545;
   font-family: 'Lato', sans-serif;
 }
 
-#particles-js {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 250px;
-}
-
-footer {
+body footer {
   background: #252525;
   width: 100%;
   min-height: 8rem;
 }
 
-@media (max-width: 1200px) {
-  h2 {
-    text-align: center;
-  }
+body footer h3 {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #fff;
+  margin-top: 1rem;
+  font-family: 'Lato', sans-serif;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1280px) {
   .container {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -133,6 +132,13 @@ footer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .container::after {
+    content: '';
+    width: 34%;
+  }
+  h2 {
+    text-align: center;
   }
 }
 /*# sourceMappingURL=main.css.map */
