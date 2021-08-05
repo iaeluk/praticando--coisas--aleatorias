@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: #252525;
+    width: 100%;
+    min-height: 16rem;
+    display: grid;
+    place-items: center;
+
+    h1 {
+        font-size: #{'max(30px, 5vw)'};
+        font-family: 'Anton', sans-serif;
+        color: #fff;
+    }
+}
+
+body {
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+
+main {
+    position: relative;
+    width: #{"min(1500px, 100%)"};
+    padding: 1.5rem;
+
+    section+section {
+        margin-top: 3.5rem;
+    }
+
+    h2+div {
+        margin-top: 2rem;
+    }
+
+    section {
+
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            font-size: #{'max(2rem, 3vw)'};
+            color: #feac5e;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .container {
+
+            display: flex;
+            flex-wrap: wrap;
+
+
+            .container--content {
+
+                max-width: 33.3%;
+                min-width: 20rem;
+                // width: #{"min(30rem, 100%)"};
+                display: flex;
+                flex-direction: column;
+
+                img {
+                    max-width: 48px;
+                }
+
+                img,
+                a {
+                    margin-bottom: 0.5rem;
+                }
+
+                a {
+                    text-decoration: none;
+                    font-size: 1.3rem;
+                    color: #4bc0c8;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                p {
+                    padding-right: 2.5rem;
+                    margin-bottom: 35px;
+                    color: #454545;
+                    font-family: 'Lato', sans-serif;
+                }
+            }
+        }
+    }
+    
+}
+
+#particles-js {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 250px;
+}
+
+footer {
+    background: #252525;
+    width: 100%;
+    min-height: 8rem;
+}
+
+@media (max-width: 1200px) {
+    h2 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 720px) {
+    .container {
+        align-items: center;
+        justify-content: center;
+    }
+
+}
