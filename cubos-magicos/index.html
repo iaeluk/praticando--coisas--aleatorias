@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubos Mágicos</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="https://image.flaticon.com/icons/png/512/663/663668.png" alt="LOGO">
+            <ul class="navigation">
+                <li>Home</li>
+                <li>O que há de novo</li>
+                <li>Sobre</li>
+                <li>Contato</li>
+            </ul>
+            <div class="toggle" onclick="toggleMenu()"></div>
+        </nav>
+        <h1>Cubos Mágicos</h1>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+
+
+
+
+    <script>
+       function toggleMenu() {
+        var menuToggle = document.querySelector('.toggle');
+        var navigation = document.querySelector('.navigation');
+        menuToggle.classList.toggle('active');
+        navigation.classList.toggle('active');
+    }
+    </script>
+</body>
+
+</html>
