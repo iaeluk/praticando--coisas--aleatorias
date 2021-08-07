@@ -11,7 +11,7 @@ body {
 
 header {
   background: url(../img/bk.jpg), #582a18;
-  background-size: cover;
+  background-position: top right;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-blend-mode:screen;
@@ -95,11 +95,71 @@ ul.active li {
 }
 
 main {
-  padding: 30rem 0;
+  color: #fff;
 }
+
+section {
+  background: #444444;
+  display: grid;
+  place-items: center;
+}
+
+section h2 {
+  width: 75%;
+  color: #fff;
+  margin-top: 3rem;
+}
+
+section p {
+  width: 75%;
+  columns: 20rem;
+  column-gap: 3rem;
+  column-rule: solid .1rem #707070;
+  padding: .8rem 0rem;
+}
+
+h2 + p {
+  padding: 2rem 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  background: #313131;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.texts{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 3rem;
+}
+
+.texts h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.texts li {
+  list-style-type:decimal;
+  margin-bottom: 1rem;
+}
+
+div img {
+  width: min(30rem, 100%);
+  mix-blend-mode: luminosity;
+  margin-bottom: 1rem;
+}
+
 footer {
-  background-color: #313131;
-  padding: 7rem 0;
+  background-color: #444444;
+  padding: 3rem 0;
 }
 
 
@@ -114,6 +174,15 @@ footer {
     display: none;
   }
 
+  .content {
+    flex-direction: row;
+    padding: 1.3rem;
+  }
+
+  .texts ol {
+    display: grid;
+    place-items: center;
+  }
 }
 
 
