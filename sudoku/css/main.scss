@@ -1,0 +1,14 @@
+@import 'navbar';
+@import 'style';
+@import 'tipografia';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: map-get($colors, cor-branca)
+   }
+

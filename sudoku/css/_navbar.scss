@@ -1,0 +1,28 @@
+@import 'style';
+@import 'tipografia';
+
+
+.header {
+    width: 100%;
+    color: map-get($colors, cor-branca);
+
+    .header__nav {
+        height: 300px;
+        background: map-get($colors, nav-color);
+        display: flex;
+        justify-content: space-between;
+        
+        .nav__img {
+            max-height: 3.5rem;
+        }
+
+        .nav__list {
+            display: flex;
+            list-style-type: none;
+        }
+    }
+}
+
+
+
+

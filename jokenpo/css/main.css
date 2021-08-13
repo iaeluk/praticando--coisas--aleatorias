@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: Comic Sans, Comic Sans MS, cursive;
+  background: white;
+  color: #555;
+  text-align: center;
+}
+
+.game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2rem;
+}
+
+.game .rodada {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.game .e-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 1.5rem 0;
+}
+
+.game .e-container .e-container-u {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.game .e-container .e-container-u .e__usuario-h {
+  background: #555;
+  color: #fff;
+}
+
+.game .e-container .e-container-c {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.game .e-container .e-container-c .e__computador-h {
+  background: #555;
+  color: #fff;
+}
+
+.game .btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.game .btn-container .btn {
+  border: none;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  margin-right: 0.3rem;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  cursor: pointer;
+}
+
+.game .btn-container .btn:hover {
+  color: #555;
+}
+
+.game .modal {
+  visibility: hidden;
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: calc(min(95%, 50rem));
+  height: 23rem;
+  background-color: #555;
+  color: #fff;
+  border-radius: 0.8rem;
+  padding: 2rem;
+  margin: 0.6rem;
+}
+
+.game .modal.visible {
+  visibility: visible;
+}
+
+.game .modal .rodadaModal {
+  font-size: 1.5rem;
+}
+
+.game .modal .resultadoModal {
+  font-size: 2rem;
+}
+
+.game .modal .jogarNovamente {
+  background-color: #008000;
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  cursor: pointer;
+}
+
+.game .modal .jogarNovamente:hover {
+  background-color: #006e00;
+}
+/*# sourceMappingURL=main.css.map */

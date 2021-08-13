@@ -1,0 +1,14 @@
+{
+    "version": 3,
+    "mappings": "ACIA,AAAA,OAAO,CAAC;EACJ,KAAK,EAAE,IAAI;EACX,KAAK,ECAO,OAAO;CDiBtB;;AAnBD,AAII,OAJG,CAIH,YAAY,CAAC;EACT,MAAM,EAAE,KAAK;EACb,UAAU,ECRH,OAAO;EDSd,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;CAUjC;;AAlBL,AAUQ,OAVD,CAIH,YAAY,CAMR,SAAS,CAAC;EACN,UAAU,EAAE,MAAM;CACrB;;AAZT,AAcQ,OAdD,CAIH,YAAY,CAUR,UAAU,CAAC;EACP,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,IAAI;CACxB;;ADjBT,AAAA,CAAC,CAAC;EACE,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CACzB;;AAED,AAAA,IAAI,CAAC;EACD,UAAU,EELE,OAAO;CFMnB",
+    "sources": [
+        "main.scss",
+        "_navbar.scss",
+        "_style.scss",
+        "_tipografia.scss",
+        "_style.scss",
+        "_tipografia.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

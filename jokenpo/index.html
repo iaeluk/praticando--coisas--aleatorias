@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Game</title>
+</head>
+
+<body>
+    <section class="game">
+
+        <h1 class="rodada">Você 0 x 0 Computador</h1>
+        <div class="e-container">
+            <div class="e-container-u">
+                <h2 class="e__usuario-h">Sua escolha </h2>
+                <h2 class="e__usuario">--</h2>
+            </div>
+            <h2>x</h2>
+            <div class="e-container-c">
+                <h2 class="e__computador-h">Computador</h2>
+                <h2 class="e__computador">--</h2>
+            </div>
+        </div>
+
+        <div class="btn-container">
+            <button class="btn btn__pedra" onclick="escolha(1)">Pedra</button>
+            <button class="btn btn__papel" onclick="escolha(2)">Papel</button>
+            <button class="btn btn__tesoura" onclick="escolha(3)">Tesoura</button>
+        </div>
+        <h2 class="resultado">Rodada</h2>
+
+        <div class="modal">
+            <h2 class="rodadaModal">Você 0 x 0 Computador</h2>
+            <h2 class="resultadoModal"></h2>
+            <h2 class="jogarNovamente" onclick="jogarNovamente()">JOGAR NOVAMENTE</h2>
+        </div>
+        
+
+    </section>
+
+
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

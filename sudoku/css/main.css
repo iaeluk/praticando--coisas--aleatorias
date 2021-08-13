@@ -1,0 +1,38 @@
+.header {
+  width: 100%;
+  color: #ffffff;
+}
+
+.header .header__nav {
+  height: 300px;
+  background: #313131;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .header__nav .nav__img {
+  max-height: 3.5rem;
+}
+
+.header .header__nav .nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+}
+/*# sourceMappingURL=main.css.map */

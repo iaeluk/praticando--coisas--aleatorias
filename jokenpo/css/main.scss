@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Comic Sans, Comic Sans MS, cursive;
+    background: rgb(255, 255, 255);
+    color:#555;
+    text-align: center;
+
+}
+
+.game {
+    // width: calc(max(50%, 50rem));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+
+    .rodada {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .e-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 1.5rem 0;
+        
+        .e-container-u {
+            display: grid;
+            place-items: center;
+
+            .e__usuario-h {
+                background: #555;
+                color: #fff;
+            }
+        }
+
+        .e-container-c {
+            display: grid;
+            place-items: center;
+
+            .e__computador-h {
+                background: #555;
+                color: #fff;
+            }
+        }
+    }
+    .btn-container {
+      display: flex;
+
+      .btn {
+          border: none;
+          border-radius: 0.3rem;
+          padding: 1rem;
+          margin-right: 0.3rem;
+          font-size: 1.5rem;
+          margin-bottom: 3rem;
+          cursor: pointer;
+
+          &:hover {
+              color: #555;
+          }
+      }
+    }
+
+    .modal {
+        visibility: hidden;
+        position: absolute;
+        display: grid;
+        place-items: center;
+        width: calc(min(95%, 50rem));
+        height: 23rem;
+        background-color: #555;
+        color: #fff;
+        border-radius: 0.8rem;
+        padding: 2rem;
+        margin: 0.6rem;
+       
+        &.visible {
+            visibility:visible;
+          }
+
+       .rodadaModal {
+           font-size: 1.5rem;
+       }
+
+       .resultadoModal {
+        font-size: 2rem;
+       }
+
+       .jogarNovamente {
+           background-color: #008000;
+           border-radius: 0.5rem;
+           padding: 0.8rem;
+           cursor: pointer;
+
+           &:hover {
+           background-color: #006e00;
+               
+           }
+       }
+    }
+}
+
