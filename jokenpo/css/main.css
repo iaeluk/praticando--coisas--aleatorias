@@ -24,6 +24,7 @@ body {
 }
 
 .game {
+  position: relative;
   width: calc(max(25%, 30rem));
   display: -webkit-box;
   display: -ms-flexbox;
@@ -119,13 +120,14 @@ body {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  width: calc(min(95%, 50rem));
+  width: 100%;
   height: 23rem;
   background-color: #555;
   color: #fff;
   border-radius: 0.8rem;
   padding: 2rem;
   margin: 0.6rem;
+  border: red solid 1px;
 }
 
 .game .modal.visible {
@@ -151,9 +153,18 @@ body {
   background-color: #006e00;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 720px) {
   .game .rodada {
     font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 719px) {
+  .game {
+    position: unset;
+  }
+  .game .modal {
+    width: 53%;
   }
 }
 /*# sourceMappingURL=main.css.map */
