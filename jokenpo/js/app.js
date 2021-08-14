@@ -46,36 +46,36 @@ function game(escolhaU, escolhaC) {
 
 
     switch (escolhaU + escolhaC) {
-        case "papelpapel": resultado = `Deu empate!`
+        case "papelpapel": resultado = `Empate!`
             rodada++
             break;
-        case "pedrapedra": resultado = `Deu empate!`
+        case "pedrapedra": resultado = `Empate!`
             rodada++
             break;
-        case "tesouratesoura": resultado = `Deu empate!`
+        case "tesouratesoura": resultado = `Empate!`
             rodada++
             break;
-        case "papelpedra": resultado = `Você ganhou!`;
-            rodada++
-            pontos[0]++
-            break;
-        case "tesourapapel": resultado = `Você ganhou!`
+        case "papelpedra": resultado = `Vitória!`
             rodada++
             pontos[0]++
             break;
-        case "pedratesoura": resultado = `Você ganhou!`
+        case "tesourapapel": resultado = `Vitória!`
             rodada++
             pontos[0]++
             break;
-        case "papeltesoura": resultado = `O computador ganhou!`
+        case "pedratesoura": resultado = `Vitória!`
+            rodada++
+            pontos[0]++
+            break;
+        case "papeltesoura": resultado = `Derrota!`
             rodada++
             pontos[1]++
             break;
-        case "pedrapapel": resultado = `O computador ganhou!`
+        case "pedrapapel": resultado = `Derrota!`
             rodada++
             pontos[1]++
             break;
-        case "tesourapedra": resultado = `O computador ganhou!`
+        case "tesourapedra": resultado = `Derrota!`
             rodada++
             pontos[1]++
 
@@ -93,13 +93,11 @@ function game(escolhaU, escolhaC) {
     
     function vencedorFinal() {
         if (pontos[0] > pontos[1]) {
-            resultadoModal.innerText += "Você Ganhou"
-            console.log("Você Ganhou")
+            resultadoModal.innerText += "Você Ganhou!"
         } else if (pontos[0] === pontos[1]) {
-            resultadoModal.innerText += "Ninguém ganhou"
-            console.log("Ninguém ganhou")
+            resultadoModal.innerText += "Ninguém ganhou!"
         } else {
-            resultadoModal.innerText += "Computador ganhou"
+            resultadoModal.innerText += "O computador ganhou!"
             console.log("Computador ganhou")
         }  
     }

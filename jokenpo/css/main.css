@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -16,13 +17,14 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: Comic Sans, Comic Sans MS, cursive;
-  background: white;
+  font-family: 'Comic Neue', cursive;
+  background: #ffffff;
   color: #555;
   text-align: center;
 }
 
 .game {
+  width: calc(max(25%, 30rem));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,8 +42,7 @@ body {
 }
 
 .game .rodada {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
 }
 
 .game .e-container {
@@ -52,30 +53,40 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  padding: 1.5rem 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3rem 0;
 }
 
 .game .e-container .e-container-u {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  border: #5555552f 1px solid;
+  border-radius: 0.15rem;
 }
 
 .game .e-container .e-container-u .e__usuario-h {
+  padding: 0 0.3rem;
   background: #555;
   color: #fff;
+}
+
+.game .e-container .versus {
+  padding: 0 14px;
 }
 
 .game .e-container .e-container-c {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  border: #5555552f 1px solid;
+  border-radius: 0.15rem;
 }
 
 .game .e-container .e-container-c .e__computador-h {
+  padding: 0 0.3rem;
   background: #555;
   color: #fff;
 }
@@ -88,11 +99,13 @@ body {
 
 .game .btn-container .btn {
   border: none;
+  outline: none;
   border-radius: 0.3rem;
-  padding: 1rem;
-  margin-right: 0.3rem;
+  padding: 0.3rem 1rem;
+  margin: 0 0.7rem 2rem;
   font-size: 1.5rem;
-  margin-bottom: 3rem;
+  font-family: 'Comic Neue', cursive;
+  font-weight: bold;
   cursor: pointer;
 }
 
@@ -136,5 +149,11 @@ body {
 
 .game .modal .jogarNovamente:hover {
   background-color: #006e00;
+}
+
+@media (max-width: 420px) {
+  .game .rodada {
+    font-size: 1.5rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
