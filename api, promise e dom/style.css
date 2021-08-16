@@ -80,6 +80,6 @@ footer {
     img {
         object-fit: cover;
         cursor: pointer;
-        max-height: 27rem;
+        max-height: 15rem;
     }
 }
