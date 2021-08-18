@@ -15,8 +15,7 @@ function getInputValue() {
 
     fetch(baseURL + searchGenius + search + tokenCover).then(res => res.json()).then(arq => {
         const info = arq.response.hits[0].result
-        console.log(info)
-
+       
         return info
     })
         .then(res => {
@@ -31,25 +30,21 @@ function getInputValue() {
                     .then(arq => {
 
                         let media = arq.response.song.media
-
-                        console.log(media)
-
                         let spotifyPosition = media.findIndex(x => x.native_uri);
-                        console.log(spotifyPosition)
-
                         let youtubePosition = media.findIndex(x => x.type === 'video');
-                        console.log(youtubePosition)
 
                         if (spotifyPosition >= 0) {
-
                             let uri = arq.response.song.media[spotifyPosition].native_uri
-                            console.log(uri)
-
                             let fullURL = uri.replace('spotify:track:', 'https://open.spotify.com/embed/track/')
-                            console.log(fullURL)
-
+                            
                             spotify.innerHTML = `<iframe src="${fullURL}" width="315" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`
                             console.log(arq.response.song.media)
+                        } else if (youtubePosition >= 0) {
+                            let youURL =  arq.response.song.media[youtubePosition].url
+
+                            spotify.innerHTML = `<a target="_blank" href="${youURL}"><button type="button">Youtube Video</button></a>`
+                        } else {
+                            spotify.innerHTML = ''
                         }
                     }))
         })
@@ -57,10 +52,10 @@ function getInputValue() {
 
 input.addEventListener('keyup', function (event) {
     if (event.code === 'Enter') {
-        event.preventDefault();
-        getInputValue();
+        event.preventDefault()
+        getInputValue()
     }
-});
+})
 
 
 
