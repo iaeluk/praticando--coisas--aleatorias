@@ -14,16 +14,18 @@ body {
     background-color: #52504f;
 }
 
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .spotify {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: .3rem;
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
 }
 
 .coverImg {
@@ -33,16 +35,20 @@ body {
     padding: 0.3rem;
 }
 
+.link-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 a {
-    width: 43%;
-    display: grid;
-    place-items: center;
+    text-decoration: none;
 }
 
 img {
-    max-width: max(100%, 20rem);
+    width: 27rem;
     transition: all 0.5s ease-in-out;
-    object-fit: cover
+    object-fit: cover;
 }
 
 img:hover {
@@ -79,6 +85,11 @@ button {
     font-family: 'Titillium Web', sans-serif;
 }
 
-a {
-    text-decoration: none;
+@media (max-width: 520px) {
+    img {
+        width: 19.7rem;
+        transition: all 0.5s ease-in-out;
+        object-fit: cover
+    }
 }
+
