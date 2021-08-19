@@ -11,7 +11,7 @@ body {
     place-items: center;
     height: 100vh;
     font-family: 'Titillium Web', sans-serif;
-    background-color: #52504f;
+    background-color: rgb(199, 52, 54);
 }
 
 .content {
