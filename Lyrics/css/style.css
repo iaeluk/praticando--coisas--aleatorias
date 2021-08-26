@@ -21,6 +21,10 @@ body {
     flex-direction: column;
 }
 
+iframe {
+    width:430px
+ }
+
 .spotify {
     display: flex;
     align-items: center;
@@ -90,6 +94,10 @@ button {
         width: 19.7rem;
         transition: all 0.5s ease-in-out;
         object-fit: cover
+    }
+
+    iframe {
+       width:315px
     }
 }
 
