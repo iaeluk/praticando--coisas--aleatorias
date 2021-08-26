@@ -21,16 +21,16 @@ body {
     flex-direction: column;
 }
 
-iframe {
-    width:430px
- }
-
 .spotify {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: .3rem;
 }
+
+iframe {
+    width:430px
+ }
 
 .coverImg {
     display: flex;

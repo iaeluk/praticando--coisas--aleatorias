@@ -36,7 +36,7 @@ function getData() {
                             let uri = data.response.song.media[spotifyPosition].native_uri
                             let fullURL = uri.replace('spotify:track:', 'https://open.spotify.com/embed/track/')
 
-                            spotify.innerHTML = `<iframe src="${fullURL}" width="315" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`
+                            spotify.innerHTML = `<iframe src="${fullURL}" width="430" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`
                         } else if (youtubePosition >= 0) {
                             // let youURL =  arq.response.song.media[youtubePosition].url
 
